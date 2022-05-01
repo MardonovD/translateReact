@@ -4,6 +4,22 @@ import Search from "./Search.js";
 import RenderSearch from "./RenderSearch.js";
 import "../Style.css";
 import Dropdown from "./Dropdown.js";
+
+const dataDropdown = [
+  {
+    label: "The Color Red",
+    value: "red",
+  },
+  {
+    label: "The Color Green",
+    value: "green",
+  },
+  {
+    label: "The Color Blue",
+    value: "blue",
+  },
+];
+
 const App = () => {
   const [val, setval] = useState("");
   const [results, setResults] = useState([]);
@@ -62,7 +78,9 @@ const App = () => {
         <div className="container-main">
           {/* <Search searchOlValProps={searchOlVal} /> */}
           {/* <RenderSearch res={results} /> */}
-          <Dropdown />
+          {/* <Dropdown drop={dataDropdown} /> */}
+
+          
         </div>
       </div>
     </div>
