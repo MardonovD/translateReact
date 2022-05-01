@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.searchRender {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid crimson;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+}
