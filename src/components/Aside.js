@@ -39,7 +39,7 @@ const Aside = () => {
       </div>
       <div className="line"></div>
       <div className="account">
-        <p>Podpiska</p>
+        <img src="" alt="" />
       </div>
     </div>
   );

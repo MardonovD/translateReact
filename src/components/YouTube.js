@@ -8,7 +8,7 @@ const YouTube = (props) => {
       <Header valH={props.val} ishlaServeryoutube={props.ishlaServer} />
       <div className="view">
         <Aside />
-        <RenderYoutubeSearch ishlaServerRender={props.ishlaServer} />
+        <RenderYoutubeSearch renderYoutube={props.renderY} />
       </div>
     </div>
   );

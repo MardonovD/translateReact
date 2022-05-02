@@ -41,6 +41,7 @@ const App = () => {
   const [val, setval] = useState("");
   const [results, setResults] = useState([]);
   const [valYoutube, setValYoutube] = useState("");
+  const [renderData, setRenderData] = useState([]);
   const valueKalitSuz = (v) => {
     setValYoutube(v);
   };
@@ -63,7 +64,7 @@ const App = () => {
         },
       }
     );
-    console.log(data);
+    setRenderData(data);
   };
 
   useEffect(() => {
@@ -120,7 +121,11 @@ const App = () => {
           {/* <Dropdown drop={dataDropdown} /> */}
           {/* <Accordion data={dataAccordion} /> */}
           {/* <Translate tarjima={dataDropTranslate} /> */}
-          <YouTube val={valueKalitSuz} ishlaServer={youtubeSearchServer} />
+          <YouTube
+            renderY={renderData}
+            val={valueKalitSuz}
+            ishlaServer={youtubeSearchServer}
+          />
         </div>
       </div>
     </div>
