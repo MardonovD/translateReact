@@ -12,6 +12,11 @@ const Header = (props) => {
     props.valH(value);
   }, [value]);
 
+  const onSubmitFunction = (e) => {
+    e.preventDefault();
+    props.ishlaServeryoutube();
+  };
+
   return (
     <div className="header">
       <div className="left-Menu">
@@ -25,10 +30,10 @@ const Header = (props) => {
           <p className="youtubelorem">YOUTUBE</p>
         </div>
       </div>
-      <div className="centerSearch">
+      <form onSubmit={onSubmitFunction} className="centerSearch">
         <input onChange={valueFunction} type="" placeholder="Search video.." />
         <i className="sistrix icon" id="olcham"></i>
-      </div>
+      </form>
       <div className="right-menu">
         <i className="video icon" id="olcham"></i>
         <i className="buromobelexperte icon" id="olcham"></i>

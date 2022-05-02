@@ -1,16 +1,24 @@
-import React from 'react';
+import React from "react";
 
-
-const RenderYoutubeSearch = () => {
-
+const RenderYoutubeSearch = (props) => {
   
   return (
-    <div className='renderSearchYoutube'>
-      
+    <div className="renderSearchYoutube">
+      <div className="card">
+        <div className="image">
+          <img src="" alt="" />
+        </div>
+        <div className="imageChannel">
+          <img src=" " alt=" " />
+          <b>nomi</b>
+        </div>
+        <div className="descripttion">
+          <p>kun.uz</p>
+          <p>timer </p>
+        </div>
+      </div>
     </div>
   );
 };
-
-RenderYoutubeSearch.propTypes = {};
 
 export default RenderYoutubeSearch;

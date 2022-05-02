@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fff;
+}
+
 .searchRender {
   width: 80%;
   margin: 20px auto;
@@ -44,7 +48,7 @@
 }
 
 #olcham {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   opacity: 0.7;
 }
@@ -109,7 +113,7 @@
   align-items: center;
 }
 .glavnaya p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .view {
@@ -122,4 +126,9 @@
   margin-top: 25px;
   height: auto;
   border: 1px solid red;
+}
+
+.card {
+  border: 1px solid black;
+  width: 240px;
 }

@@ -44,13 +44,27 @@ const App = () => {
   const valueKalitSuz = (v) => {
     setValYoutube(v);
   };
-  console.log(valYoutube);
+  // console.log(valYoutube);
   const searchOlVal = (a) => {
     setval(a);
   };
 
-
-  
+  const youtubeSearchServer = async () => {
+    const key = "AIzaSyBmDL0NCyq2ZBYwgVLLOWQqAk-CcvrPUXQ";
+    const data = await axios.get(
+      "https://www.googleapis.com/youtube/v3/search",
+      {
+        params: {
+          part: "snippet",
+          type: "video",
+          maxResults: 15,
+          key: key,
+          q: valYoutube,
+        },
+      }
+    );
+    console.log(data);
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -106,7 +120,7 @@ const App = () => {
           {/* <Dropdown drop={dataDropdown} /> */}
           {/* <Accordion data={dataAccordion} /> */}
           {/* <Translate tarjima={dataDropTranslate} /> */}
-          <YouTube val={valueKalitSuz} />
+          <YouTube val={valueKalitSuz} ishlaServer={youtubeSearchServer} />
         </div>
       </div>
     </div>

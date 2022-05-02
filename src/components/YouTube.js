@@ -5,10 +5,10 @@ import RenderYoutubeSearch from "./RenderYoutubeSearch.js";
 const YouTube = (props) => {
   return (
     <div className="youtube">
-      <Header valH={props.val} />
+      <Header valH={props.val} ishlaServeryoutube={props.ishlaServer} />
       <div className="view">
         <Aside />
-        <RenderYoutubeSearch />
+        <RenderYoutubeSearch ishlaServerRender={props.ishlaServer} />
       </div>
     </div>
   );
