@@ -8,7 +8,7 @@ import Accordion from "./Accordion.js";
 import Translate from "./Translate.js";
 import YouTube from "./YouTube.js";
 import Aside from "./Aside.js";
-import ShowVideo from "./ShowVideo.js";
+import Showiframe from "./Showiframe.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -106,8 +106,9 @@ const App = () => {
   };
 
   const showView = () => {
-    if (videoIdOlindi && videoIdOlindi !== "") {
-      <ShowVideo idd={videoIdOlindi} />;
+    // e.preventDefault();
+    if (videoIdOlindi) {
+      <Showiframe idd={videoIdOlindi} />;
       console.log(videoIdOlindi);
     }
   };

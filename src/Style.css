@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   padding: 10px 20px;
   /* position: fixed; */
 }
