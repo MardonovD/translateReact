@@ -1,7 +1,11 @@
 import React from "react";
 
 const RenderYoutubeSearch = (props) => {
-  console.log(props.renderYoutube.data?.items);
+  const videoId = (val) => {
+    // console.log(val);
+    props.videoIdAppRender(val.id.videoId);
+  };
+  // console.log(props.renderYoutube.data?.items);
   const renderView = () => {
     return props.renderYoutube.data?.items.map((val) => {
       return (
@@ -23,7 +27,15 @@ const RenderYoutubeSearch = (props) => {
               src={val.snippet.thumbnails.medium.url}
               alt="image"
             />
-            <a href="#" onClick={} style={{ cursor: "pointer" }}>{val.snippet.title}</a>
+            <a
+              href="#"
+              onClick={() => {
+                videoId(val);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              {val.snippet.title}
+            </a>
           </div>
           <div className="descripttion">
             <p>{val.snippet.channelTitle}</p>

@@ -8,6 +8,7 @@ import Accordion from "./Accordion.js";
 import Translate from "./Translate.js";
 import YouTube from "./YouTube.js";
 import Aside from "./Aside.js";
+import ShowVideo from "./ShowVideo.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -42,6 +43,9 @@ const App = () => {
   const [results, setResults] = useState([]);
   const [valYoutube, setValYoutube] = useState("");
   const [renderData, setRenderData] = useState([]);
+  const [videoIdOlindi, setVideoIdOlindi] = useState("");
+
+  // console.log(videoIdOlindi);
   const valueKalitSuz = (v) => {
     setValYoutube(v);
   };
@@ -97,6 +101,17 @@ const App = () => {
     };
   }, [val]);
 
+  const videoIdFunc = (id) => {
+    setVideoIdOlindi(id);
+  };
+
+  const showView = () => {
+    if (videoIdOlindi && videoIdOlindi !== "") {
+      <ShowVideo idd={videoIdOlindi} />;
+      console.log(videoIdOlindi);
+    }
+  };
+
   // console.log(val);
   return (
     <div className="app">
@@ -125,7 +140,9 @@ const App = () => {
             renderY={renderData}
             val={valueKalitSuz}
             ishlaServer={youtubeSearchServer}
+            videoIdApp={videoIdFunc}
           />
+          {showView()}
         </div>
       </div>
     </div>
