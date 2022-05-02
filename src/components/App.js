@@ -40,9 +40,17 @@ const dataDropTranslate = [
 const App = () => {
   const [val, setval] = useState("");
   const [results, setResults] = useState([]);
+  const [valYoutube, setValYoutube] = useState("");
+  const valueKalitSuz = (v) => {
+    setValYoutube(v);
+  };
+  console.log(valYoutube);
   const searchOlVal = (a) => {
     setval(a);
   };
+
+
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -98,8 +106,7 @@ const App = () => {
           {/* <Dropdown drop={dataDropdown} /> */}
           {/* <Accordion data={dataAccordion} /> */}
           {/* <Translate tarjima={dataDropTranslate} /> */}
-          <YouTube />
-          
+          <YouTube val={valueKalitSuz} />
         </div>
       </div>
     </div>

@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Style.css";
-const Header = () => {
+const Header = (props) => {
+  const [value, setValue] = useState("");
+
+  const valueFunction = (e) => {
+    setValue(e.target.value);
+  };
+  // console.log(value);
+
+  useEffect(() => {
+    props.valH(value);
+  }, [value]);
+
   return (
     <div className="header">
       <div className="left-Menu">
@@ -15,7 +26,7 @@ const Header = () => {
         </div>
       </div>
       <div className="centerSearch">
-        <input type="" placeholder="Search video.." />
+        <input onChange={valueFunction} type="" placeholder="Search video.." />
         <i className="sistrix icon" id="olcham"></i>
       </div>
       <div className="right-menu">
