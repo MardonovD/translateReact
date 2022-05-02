@@ -5,8 +5,22 @@ const Translate = (props) => {
   const [valTranslate, setValTranslate] = useState("");
   const [tar, setTar] = useState("");
   console.log(tar);
+
   const valueTranslate = (v) => {
     setValTranslate(v.target.value);
+  };
+
+  const options = () => {
+    return (
+      <div className="select">
+        <select className="ui dropdown">
+          return
+          {props.tarjima.map((val) => {
+            <option value={val.value}>{val.label}</option>;
+          })}
+        </select>
+      </div>
+    );
   };
 
   return (
@@ -19,13 +33,7 @@ const Translate = (props) => {
             placeholder="Search..."
           />
         </div>
-        <div className="select">
-          <select className="ui dropdown">
-            <option value="">Gender</option>
-            <option value="1">Male</option>
-            <option value="0">Female</option>
-          </select>
-        </div>
+        {options()}
       </div>
     </div>
   );

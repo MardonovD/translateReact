@@ -6,6 +6,7 @@ import "../Style.css";
 import Dropdown from "./Dropdown.js";
 import Accordion from "./Accordion.js";
 import Translate from "./Translate.js";
+import YouTube from "./YouTube.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -95,7 +96,8 @@ const App = () => {
           {/* <RenderSearch res={results} /> */}
           {/* <Dropdown drop={dataDropdown} /> */}
           {/* <Accordion data={dataAccordion} /> */}
-          <Translate tarjima={dataDropTranslate} />
+          {/* <Translate tarjima={dataDropTranslate} /> */}
+          <YouTube />
         </div>
       </div>
     </div>
