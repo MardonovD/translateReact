@@ -4,7 +4,8 @@ import Search from "./Search.js";
 import RenderSearch from "./RenderSearch.js";
 import "../Style.css";
 import Dropdown from "./Dropdown.js";
-
+import Accordion from "./Accordion.js";
+import Translate from "./Translate.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -18,6 +19,20 @@ const dataDropdown = [
     label: "The Color Blue",
     value: "blue",
   },
+];
+
+const dataAccordion = [
+  { savol: "Ishlaring yaxshimi", javob: "zur" },
+  { savol: "React qanday", javob: "oson" },
+  { savol: "Qalay", javob: "zur" },
+  { savol: "Qalay", javob: "zur" },
+];
+
+const dataDropTranslate = [
+  { label: "Uzbek", value: "uz" },
+  { label: "English", value: "en" },
+  { label: "Russian", value: "ru" },
+  { label: "Arabic", value: "ar" },
 ];
 
 const App = () => {
@@ -79,8 +94,8 @@ const App = () => {
           {/* <Search searchOlValProps={searchOlVal} /> */}
           {/* <RenderSearch res={results} /> */}
           {/* <Dropdown drop={dataDropdown} /> */}
-
-          
+          {/* <Accordion data={dataAccordion} /> */}
+          <Translate tarjima={dataDropTranslate} />
         </div>
       </div>
     </div>
