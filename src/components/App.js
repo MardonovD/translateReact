@@ -113,14 +113,49 @@ const App = () => {
     }
   };
 
+  const router = () => {
+    if (window.location.pathname == "/search") {
+      return <Search searchOlValProps={searchOlVal} />;
+    } else if (window.location.pathname == "/translate") {
+      return <Translate tarjima={dataDropTranslate} />;
+    } else if (window.location.pathname == "/dropdown") {
+      return <Dropdown drop={dataDropdown} />;
+    } else if (window.location.pathname == "/") {
+      return <Accordion data={dataAccordion} />;
+    } else if (window.location.pathname == "/accordion") {
+      return <Accordion data={dataAccordion} />;
+    } else if (window.location.pathname == "/youtube") {
+      return (
+        <YouTube
+          renderY={renderData}
+          val={valueKalitSuz}
+          ishlaServer={youtubeSearchServer}
+          videoIdApp={videoIdFunc}
+        />
+      );
+    }
+  };
+
   // console.log(val);
   return (
     <div className="app">
       <div className="ui pointing menu">
-        <a className="item active">Search</a>
-        <a className="item">Accordion</a>
+        <a href="/search" className="item active">
+          Search
+        </a>
+        <a href="/accordion" className="item">
+          Accordion
+        </a>
         <a className="item">Friends</a>
-        <a className="item">You-Tube</a>
+        <a href="/youtube" className="item">
+          You-Tube
+        </a>
+        <a href="/dropdown" className="item">
+          Dropdown
+        </a>
+        <a href="/translate" className="item">
+          Translate
+        </a>
         <div className="right menu">
           <div className="item">
             <div className="ui transparent icon input">
@@ -137,13 +172,14 @@ const App = () => {
           {/* <Dropdown drop={dataDropdown} /> */}
           {/* <Accordion data={dataAccordion} /> */}
           {/* <Translate tarjima={dataDropTranslate} /> */}
-          <YouTube
+          {/* <YouTube
             renderY={renderData}
             val={valueKalitSuz}
             ishlaServer={youtubeSearchServer}
             videoIdApp={videoIdFunc}
           />
-          {showView()}
+          {showView()} */}
+          <div>{router()} </div>
         </div>
       </div>
     </div>

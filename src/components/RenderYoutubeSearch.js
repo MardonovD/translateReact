@@ -29,7 +29,7 @@ const RenderYoutubeSearch = (props) => {
             />
             <a
               href="#"
-              onClick={() => {
+              onClick={(e) => {
                 videoId(val);
               }}
               style={{ cursor: "pointer" }}
