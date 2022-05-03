@@ -10,6 +10,8 @@ import YouTube from "./YouTube.js";
 import Aside from "./Aside.js";
 import Showiframe from "./Showiframe.js";
 import Weather from "./Weather.js";
+import Header from "./Header.js";
+import HeaderMenu from "./HeaderMenu.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -109,8 +111,7 @@ const App = () => {
   const showView = () => {
     // e.preventDefault();
     if (videoIdOlindi) {
-      <Showiframe idd={videoIdOlindi} />;
-      console.log(videoIdOlindi);
+      return <Showiframe iddd={videoIdOlindi} />;
     }
   };
 
@@ -135,7 +136,6 @@ const App = () => {
       return <Dropdown drop={dataDropdown} />;
     } else if (window.location.pathname == "/") {
       return <Accordion data={dataAccordion} />;
-    } else if (window.location.pathname == "/accordion") {
     } else if (window.location.pathname == "/weather") {
       return <Weather data={dataAccordion} />;
     } else if (window.location.pathname == "/accordion") {
@@ -155,36 +155,7 @@ const App = () => {
   // console.log(val);
   return (
     <div className="app">
-      <div className="ui pointing menu">
-        <a href="/search" className="item active">
-          Search
-        </a>
-        <a href="/accordion" className="item">
-          Accordion
-        </a>
-        <a href="/weather" className="item">
-          Weather
-        </a>
-        <a className="item">Friends</a>
-        <a href="/youtube" className="item">
-          You-Tube
-        </a>
-        <a href="/dropdown" className="item">
-          Dropdown
-        </a>
-
-        <a href="/translate" className="item">
-          Translate
-        </a>
-        <div className="right menu">
-          <div className="item">
-            <div className="ui transparent icon input">
-              <input type="text" placeholder="Search..." />
-              <i className="search link icon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeaderMenu />
       <div className="ui segment">
         <div className="container-main">
           {/* <Search searchOlValProps={searchOlVal} /> */}
@@ -197,8 +168,8 @@ const App = () => {
             val={valueKalitSuz}
             ishlaServer={youtubeSearchServer}
             videoIdApp={videoIdFunc}
-          />
-          {showView()} */}
+          />*/}
+          {showView()}
 
           <div>{router()} </div>
         </div>
