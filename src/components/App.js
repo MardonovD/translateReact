@@ -9,6 +9,7 @@ import Translate from "./Translate.js";
 import YouTube from "./YouTube.js";
 import Aside from "./Aside.js";
 import Showiframe from "./Showiframe.js";
+import Weather from "./Weather.js";
 const dataDropdown = [
   {
     label: "The Color Red",
@@ -113,6 +114,18 @@ const App = () => {
     }
   };
 
+  ///   WEATHER
+  //d161c849d306849d7d38782ca40345c3
+
+  // const apiWeather = async () => {
+  //   const dataWeather = await fetch(
+  //     `https://goweather.herokuapp.com/weather/${russia}`
+  //   );
+  //   const malumot = await dataWeather.json();
+  //   console.log(malumot);
+  // };
+  // apiWeather();
+
   const router = () => {
     if (window.location.pathname == "/search") {
       return <Search searchOlValProps={searchOlVal} />;
@@ -122,6 +135,9 @@ const App = () => {
       return <Dropdown drop={dataDropdown} />;
     } else if (window.location.pathname == "/") {
       return <Accordion data={dataAccordion} />;
+    } else if (window.location.pathname == "/accordion") {
+    } else if (window.location.pathname == "/weather") {
+      return <Weather data={dataAccordion} />;
     } else if (window.location.pathname == "/accordion") {
       return <Accordion data={dataAccordion} />;
     } else if (window.location.pathname == "/youtube") {
@@ -146,6 +162,9 @@ const App = () => {
         <a href="/accordion" className="item">
           Accordion
         </a>
+        <a href="/weather" className="item">
+          Weather
+        </a>
         <a className="item">Friends</a>
         <a href="/youtube" className="item">
           You-Tube
@@ -153,6 +172,7 @@ const App = () => {
         <a href="/dropdown" className="item">
           Dropdown
         </a>
+
         <a href="/translate" className="item">
           Translate
         </a>
@@ -179,6 +199,7 @@ const App = () => {
             videoIdApp={videoIdFunc}
           />
           {showView()} */}
+
           <div>{router()} </div>
         </div>
       </div>

@@ -166,3 +166,15 @@ body {
   gap: 5px;
   padding: 10px 0;
 }
+
+.weather {
+  width: 80%;
+  height: 80vh;
+  border: 1px solid red;
+  margin: 0 auto;
+
+  background-image: url("../src/img/26383.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
